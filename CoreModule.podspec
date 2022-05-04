@@ -6,13 +6,13 @@ Pod::Spec.new do |spec|
                                   CoreModule contains abstractions such as protocols and base classes related with data source
                                 DESC
 
-  spec.homepage               = "https://github.com/intan1907/Intan-iOS-Core"
+  spec.homepage               = "https://github.com/intan1907/CoreModule"
   spec.license                = { :type => "MIT", :file => "LICENSE" }
   spec.author                 = { "Intan Nurjanah" => "intan3951@gmail.com" }
 
   spec.platform               = :ios, "14.0"
 
-  spec.source                 = { :git => "https://github.com/intan1907/Intan-iOS-Core.git", :tag => "#{spec.version}" }
+  spec.source                 = { :git => "https://github.com/intan1907/CoreModule.git", :tag => "#{spec.version}" }
 
   spec.source_files           = "CoreModule/**/*.{h,m,swift,a}"
 
