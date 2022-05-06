@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                   = "CoreModule"
-  spec.version                = "1.0.0"
+  spec.version                = "1.0.1"
   spec.summary                = "This is a CoreModule that contains files related with data transaction"
   spec.description            = <<-DESC
                                   CoreModule contains abstractions such as protocols and base classes related with data source
@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.license                = { :type => "MIT", :file => "LICENSE" }
   spec.author                 = { "Intan Nurjanah" => "intan3951@gmail.com" }
 
-  spec.platform               = :ios, "14.0"
+  spec.platform               = :ios, "12.0"
 
   spec.source                 = { :git => "https://github.com/intan1907/CoreModule.git", :tag => "#{spec.version}" }
 
@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
 
   spec.framework              = "UIKit"
 
-  spec.swift_version          = "5.1"
+  spec.swift_version          = "5.0"
 
   spec.dependency 'Alamofire', '5.6.1'
   spec.dependency 'RealmSwift', '10.25.0'
