@@ -13,30 +13,29 @@ public class Presenter<Request, Response, Interactor: UseCase>: ObservableObject
     
     private let _useCase: Interactor
     
-    @Published public var item: Response?
-    @Published public var errorMessage: String = ""
-    @Published public var isLoading: Bool = false
-    @Published public var isError: Bool = false
+    public var item = PublishSubject<Response>()
+    public var errorMessage = PublishSubject<String>()
+    public var isLoading = PublishSubject<Bool>()
+    public var isError = PublishSubject<Bool>()
     
     public init(useCase: Interactor) {
         _useCase = useCase
     }
     
     public func execute(request: Request?) {
-        isLoading = true
+        isLoading.onNext(true)
         _useCase.execute(request: request)
             .observe(on: MainScheduler.instance)
             .subscribe { item in
-                self.item = item
+                self.item.onNext(item)
             } onError: { error in
-                self.errorMessage = error.localizedDescription
-                self.isError = true
-                self.isLoading = false
+                self.errorMessage.onNext(error.localizedDescription)
+                self.isError.onNext(true)
+                self.isLoading.onNext(false)
             } onCompleted: {
-                self.isError = false
-                self.isLoading = false
+                self.isError.onNext(false)
+                self.isLoading.onNext(false)
             }.disposed(by: disposeBag)
     }
-    
     
 }
