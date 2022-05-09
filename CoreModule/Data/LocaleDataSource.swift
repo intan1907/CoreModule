@@ -15,4 +15,5 @@ public protocol LocaleDataSource {
     func add(entities: [Response]) -> Observable<Bool>
     func get(id: String) -> Observable<Response>
     func update(id: String, entity: Response) -> Observable<Bool>
+    func delete(id: String) -> Observable<Bool>
 }
