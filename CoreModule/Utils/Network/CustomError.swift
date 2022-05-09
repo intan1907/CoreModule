@@ -13,7 +13,7 @@ public enum CustomHttpError: LocalizedError {
     case serviceNotAvailable
     case serverError
     
-    public var errorDescription: String {
+    public var errorDescription: String? {
         switch self {
         case .noRequest:
             return "No request!"
@@ -32,7 +32,7 @@ public enum DatabaseError: LocalizedError {
     case invalidInstance
     case requestFailed
     
-    public var errorDescription: String {
+    public var errorDescription: String? {
         switch self {
         case .invalidInstance:
             return "Database can't instance."
