@@ -1,39 +1,16 @@
 PODS:
-  - Alamofire (5.6.1)
-  - Realm (10.25.2):
-    - Realm/Headers (= 10.25.2)
-  - Realm/Headers (10.25.2)
-  - RealmSwift (10.25.2):
-    - Realm (= 10.25.2)
   - RxSwift (6.5.0)
 
 DEPENDENCIES:
-  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, tag `5.6.1`)
-  - RealmSwift (~> 10.25.0)
   - RxSwift (= 6.5.0)
 
 SPEC REPOS:
   trunk:
-    - Realm
-    - RealmSwift
     - RxSwift
 
-EXTERNAL SOURCES:
-  Alamofire:
-    :git: https://github.com/Alamofire/Alamofire.git
-    :tag: 5.6.1
-
-CHECKOUT OPTIONS:
-  Alamofire:
-    :git: https://github.com/Alamofire/Alamofire.git
-    :tag: 5.6.1
-
 SPEC CHECKSUMS:
-  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
-  Realm: 978303663d0509166498f423d112e5ee97d4c91b
-  RealmSwift: a0c30c1efc49e928a0a6f8fb141bb2629616d79b
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: e98abae7928f6c674b2719afc6ce62c45382fbc8
+PODFILE CHECKSUM: dde088a5dc2304284485d11357be63f6a42a9c02
 
 COCOAPODS: 1.11.0.beta.2
