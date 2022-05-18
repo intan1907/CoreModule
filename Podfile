@@ -6,8 +6,6 @@ target 'CoreModule' do
   use_frameworks!
 
   # Pods for CoreModule
-  pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :tag => '5.6.1'
-  pod 'RealmSwift', '~> 10.25.0'
   pod 'RxSwift', '6.5.0'
 
 end

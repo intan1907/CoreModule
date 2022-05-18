@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                   = "CoreModule"
-  spec.version                = "1.0.4"
+  spec.version                = "1.0.5"
   spec.summary                = "This is a CoreModule that contains files related with data transaction"
   spec.description            = <<-DESC
                                   CoreModule contains abstractions such as protocols and base classes related with data source
@@ -20,7 +20,5 @@ Pod::Spec.new do |spec|
 
   spec.swift_version          = "5.0"
 
-  spec.dependency 'Alamofire', '5.6.1'
-  spec.dependency 'RealmSwift', '10.25.0'
   spec.dependency 'RxSwift', '6.5.0'
 end
