@@ -1,9 +1,9 @@
 Pod::Spec.new do |spec|
   spec.name                   = "CoreModule"
-  spec.version                = "1.0.5"
+  spec.version                = "1.0.6"
   spec.summary                = "This is a CoreModule that contains files related with data transaction"
   spec.description            = <<-DESC
-                                  CoreModule contains abstractions such as protocols and base classes related with data source
+                                  CoreModule contains abstractions such as protocols and generic classes related with data source
                                 DESC
 
   spec.homepage               = "https://github.com/intan1907/CoreModule"
@@ -19,6 +19,4 @@ Pod::Spec.new do |spec|
   spec.framework              = "UIKit"
 
   spec.swift_version          = "5.0"
-
-  spec.dependency 'RxSwift', '6.5.0'
 end
