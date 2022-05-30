@@ -5,37 +5,42 @@
 //  Created by Intan Nurjanah on 18/04/22.
 //
 
-import RxSwift
+import Combine
 
 public class Presenter<Request, Response, Interactor: UseCase>: ObservableObject where Interactor.Request == Request, Interactor.Response == Response {
     
-    private var disposeBag = DisposeBag()
+    private var cancellables: Set<AnyCancellable> = []
     
-    private let _useCase: Interactor
+    private let useCase: Interactor
     
-    public var item = PublishSubject<Response>()
-    public var errorMessage = PublishSubject<String>()
-    public var isLoading = PublishSubject<Bool>()
-    public var isError = PublishSubject<Bool>()
+    @Published public var item: Response? = nil
+    @Published public var errorMessage: String = ""
+    @Published public var isLoading: Bool = false
+    @Published public var isError: Bool = false
     
     public init(useCase: Interactor) {
-        _useCase = useCase
+        self.useCase = useCase
     }
     
     public func execute(request: Request?) {
-        isLoading.onNext(true)
-        _useCase.execute(request: request)
-            .observe(on: MainScheduler.instance)
-            .subscribe { item in
-                self.item.onNext(item)
-            } onError: { error in
-                self.errorMessage.onNext(error.localizedDescription)
-                self.isError.onNext(true)
-                self.isLoading.onNext(false)
-            } onCompleted: {
-                self.isError.onNext(false)
-                self.isLoading.onNext(false)
-            }.disposed(by: disposeBag)
+        self.isLoading = true
+        self.useCase.execute(request: request)
+            .receive(on: RunLoop.main)
+            .sink { [weak self] completion in
+                guard let self = self else { return }
+                switch completion {
+                case .failure(let error):
+                    self.errorMessage = error.localizedDescription
+                    self.isError = true
+                case .finished:
+                    self.isLoading = false
+                    self.isError = false
+                }
+                self.isLoading = false
+            } receiveValue: { [weak self] response in
+                self?.item = response
+            }
+            .store(in: &cancellables)
     }
     
 }
