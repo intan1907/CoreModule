@@ -21,5 +21,5 @@ Pod::Spec.new do |spec|
   spec.swift_version          = "5.0"
 
   spec.dependency 'Alamofire', '5.6.1'
-  spec.dependency 'RealmSwift', '10.25.0'
+  spec.dependency 'RealmSwift', '~> 10.25.0'
 end
