@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0CA55F8EDDF0060DA9D7E19A /* Pods_CoreModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 331BF53FEB4856149280BE10 /* Pods_CoreModule.framework */; };
+		EF058BA42844894C00C08B67 /* Results+ToArrayExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF058BA32844894C00C08B67 /* Results+ToArrayExt.swift */; };
+		EF058BA62844896700C08B67 /* PrefHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF058BA52844896700C08B67 /* PrefHelper.swift */; };
+		EF058BA82844898100C08B67 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF058BA72844898100C08B67 /* APIRequest.swift */; };
+		EF058BAA2844899100C08B67 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF058BA92844899100C08B67 /* CustomError.swift */; };
+		EF058BAC284489A300C08B67 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF058BAB284489A300C08B67 /* DBManager.swift */; };
+		EF058BAE28448A2800C08B67 /* UserDefault+ObjectSavableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF058BAD28448A2800C08B67 /* UserDefault+ObjectSavableExt.swift */; };
+		EF058BB128448B0500C08B67 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF058BB028448B0500C08B67 /* NetworkConfig.swift */; };
 		EFBD9D2F2822302E003200AC /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBD9D1B2822302E003200AC /* Repository.swift */; };
 		EFBD9D302822302E003200AC /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBD9D1C2822302E003200AC /* LocaleDataSource.swift */; };
 		EFBD9D312822302E003200AC /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBD9D1D2822302E003200AC /* DataSource.swift */; };
@@ -23,6 +30,13 @@
 		331BF53FEB4856149280BE10 /* Pods_CoreModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB5F4E98493066D993E198C /* Pods-CoreModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreModule.debug.xcconfig"; path = "Target Support Files/Pods-CoreModule/Pods-CoreModule.debug.xcconfig"; sourceTree = "<group>"; };
 		51AC7C3C821B921094999DE8 /* Pods-CoreModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreModule.release.xcconfig"; path = "Target Support Files/Pods-CoreModule/Pods-CoreModule.release.xcconfig"; sourceTree = "<group>"; };
+		EF058BA32844894C00C08B67 /* Results+ToArrayExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results+ToArrayExt.swift"; sourceTree = "<group>"; };
+		EF058BA52844896700C08B67 /* PrefHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefHelper.swift; sourceTree = "<group>"; };
+		EF058BA72844898100C08B67 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		EF058BA92844899100C08B67 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		EF058BAB284489A300C08B67 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		EF058BAD28448A2800C08B67 /* UserDefault+ObjectSavableExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+ObjectSavableExt.swift"; sourceTree = "<group>"; };
+		EF058BB028448B0500C08B67 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		EFBD9D1B2822302E003200AC /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		EFBD9D1C2822302E003200AC /* LocaleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleDataSource.swift; sourceTree = "<group>"; };
 		EFBD9D1D2822302E003200AC /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
@@ -64,6 +78,34 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EF058BA12844892F00C08B67 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EF058BA52844896700C08B67 /* PrefHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		EF058BA22844893500C08B67 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EF058BA32844894C00C08B67 /* Results+ToArrayExt.swift */,
+				EF058BAD28448A2800C08B67 /* UserDefault+ObjectSavableExt.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EF058BAF28448AF500C08B67 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EF058BA72844898100C08B67 /* APIRequest.swift */,
+				EF058BA92844899100C08B67 /* CustomError.swift */,
+				EF058BAB284489A300C08B67 /* DBManager.swift */,
+				EF058BB028448B0500C08B67 /* NetworkConfig.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		EFBD9D192822302E003200AC /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +127,9 @@
 		EFBD9D1E2822302E003200AC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EF058BAF28448AF500C08B67 /* Network */,
+				EF058BA22844893500C08B67 /* Extension */,
+				EF058BA12844892F00C08B67 /* Helper */,
 				EFBD9D252822302E003200AC /* Mapper */,
 			);
 			path = Utils;
@@ -262,8 +307,15 @@
 				EFBD9D312822302E003200AC /* DataSource.swift in Sources */,
 				EFBD9D382822302E003200AC /* Presenter.swift in Sources */,
 				EFBD9D3B2822302E003200AC /* UseCase.swift in Sources */,
+				EF058BAC284489A300C08B67 /* DBManager.swift in Sources */,
 				EFBD9D3A2822302E003200AC /* Interactor.swift in Sources */,
+				EF058BA82844898100C08B67 /* APIRequest.swift in Sources */,
+				EF058BAA2844899100C08B67 /* CustomError.swift in Sources */,
 				EFBD9D362822302E003200AC /* Mapper.swift in Sources */,
+				EF058BAE28448A2800C08B67 /* UserDefault+ObjectSavableExt.swift in Sources */,
+				EF058BA62844896700C08B67 /* PrefHelper.swift in Sources */,
+				EF058BA42844894C00C08B67 /* Results+ToArrayExt.swift in Sources */,
+				EF058BB128448B0500C08B67 /* NetworkConfig.swift in Sources */,
 				EFBD9D302822302E003200AC /* LocaleDataSource.swift in Sources */,
 				EFBD9D392822302E003200AC /* GetListPresenter.swift in Sources */,
 				EFBD9D2F2822302E003200AC /* Repository.swift in Sources */,
