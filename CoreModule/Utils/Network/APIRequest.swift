@@ -8,8 +8,8 @@
 import Alamofire
 import Combine
 
-struct APIRequest {
-    static func request<T: Codable>(url: URLRequestConvertible) -> AnyPublisher<T, Error> {
+public struct APIRequest {
+    public static func request<T: Codable>(url: URLRequestConvertible) -> AnyPublisher<T, Error> {
         return Future<T, Error> { completion in
             let dataRequest: DataRequest? = AF.request(url)
             

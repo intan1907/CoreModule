@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct NetworkConfig {
-    static func getConfig() -> [String: Any]? {
+public struct NetworkConfig {
+    public static func getConfig() -> [String: Any]? {
         var myDict: [String: Any]?
         if let path = Bundle.main.path(forResource: "ServiceConfig", ofType: "plist"),
            let dict = NSDictionary(contentsOfFile: path) as? [String: Any] {
@@ -18,14 +18,14 @@ struct NetworkConfig {
         return myDict
     }
     
-    static func getBaseUrl() -> String {
+    public static func getBaseUrl() -> String {
         if let config = getConfig() {
             return config["base_url"] as? String ?? ""
         }
         return ""
     }
     
-    static func getApiKey() -> String {
+    public static func getApiKey() -> String {
         if let config = getConfig() {
             return config["api_key"] as? String ?? ""
         }
