@@ -15,6 +15,10 @@
 		EF058BAC284489A300C08B67 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF058BAB284489A300C08B67 /* DBManager.swift */; };
 		EF058BAE28448A2800C08B67 /* UserDefault+ObjectSavableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF058BAD28448A2800C08B67 /* UserDefault+ObjectSavableExt.swift */; };
 		EF058BB128448B0500C08B67 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF058BB028448B0500C08B67 /* NetworkConfig.swift */; };
+		EF9F13712847476100F97EB1 /* BaseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9F13702847476100F97EB1 /* BaseMapper.swift */; };
+		EF9F13732847476D00F97EB1 /* ResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9F13722847476D00F97EB1 /* ResponseMapper.swift */; };
+		EF9F13752847478300F97EB1 /* ParamMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9F13742847478300F97EB1 /* ParamMapper.swift */; };
+		EF9F1377284747A900F97EB1 /* EntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9F1376284747A900F97EB1 /* EntityMapper.swift */; };
 		EFBD9D2F2822302E003200AC /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBD9D1B2822302E003200AC /* Repository.swift */; };
 		EFBD9D302822302E003200AC /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBD9D1C2822302E003200AC /* LocaleDataSource.swift */; };
 		EFBD9D312822302E003200AC /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBD9D1D2822302E003200AC /* DataSource.swift */; };
@@ -37,6 +41,10 @@
 		EF058BAB284489A300C08B67 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		EF058BAD28448A2800C08B67 /* UserDefault+ObjectSavableExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+ObjectSavableExt.swift"; sourceTree = "<group>"; };
 		EF058BB028448B0500C08B67 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		EF9F13702847476100F97EB1 /* BaseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMapper.swift; sourceTree = "<group>"; };
+		EF9F13722847476D00F97EB1 /* ResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMapper.swift; sourceTree = "<group>"; };
+		EF9F13742847478300F97EB1 /* ParamMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamMapper.swift; sourceTree = "<group>"; };
+		EF9F1376284747A900F97EB1 /* EntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityMapper.swift; sourceTree = "<group>"; };
 		EFBD9D1B2822302E003200AC /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		EFBD9D1C2822302E003200AC /* LocaleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleDataSource.swift; sourceTree = "<group>"; };
 		EFBD9D1D2822302E003200AC /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
@@ -139,6 +147,10 @@
 			isa = PBXGroup;
 			children = (
 				EFBD9D262822302E003200AC /* Mapper.swift */,
+				EF9F13702847476100F97EB1 /* BaseMapper.swift */,
+				EF9F13722847476D00F97EB1 /* ResponseMapper.swift */,
+				EF9F13742847478300F97EB1 /* ParamMapper.swift */,
+				EF9F1376284747A900F97EB1 /* EntityMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -304,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF9F13732847476D00F97EB1 /* ResponseMapper.swift in Sources */,
 				EFBD9D312822302E003200AC /* DataSource.swift in Sources */,
 				EFBD9D382822302E003200AC /* Presenter.swift in Sources */,
 				EFBD9D3B2822302E003200AC /* UseCase.swift in Sources */,
@@ -313,10 +326,13 @@
 				EF058BAA2844899100C08B67 /* CustomError.swift in Sources */,
 				EFBD9D362822302E003200AC /* Mapper.swift in Sources */,
 				EF058BAE28448A2800C08B67 /* UserDefault+ObjectSavableExt.swift in Sources */,
+				EF9F13752847478300F97EB1 /* ParamMapper.swift in Sources */,
 				EF058BA62844896700C08B67 /* PrefHelper.swift in Sources */,
 				EF058BA42844894C00C08B67 /* Results+ToArrayExt.swift in Sources */,
+				EF9F13712847476100F97EB1 /* BaseMapper.swift in Sources */,
 				EF058BB128448B0500C08B67 /* NetworkConfig.swift in Sources */,
 				EFBD9D302822302E003200AC /* LocaleDataSource.swift in Sources */,
+				EF9F1377284747A900F97EB1 /* EntityMapper.swift in Sources */,
 				EFBD9D392822302E003200AC /* GetListPresenter.swift in Sources */,
 				EFBD9D2F2822302E003200AC /* Repository.swift in Sources */,
 			);
