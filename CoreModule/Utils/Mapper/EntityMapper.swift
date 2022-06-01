@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol EntityMapper: BaseMapper {
+public protocol EntityMapper: Mapper {
     associatedtype Entity
     
     func transformDomainToEntity(domain: Domain) -> Entity

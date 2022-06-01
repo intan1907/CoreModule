@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol ResponseMapper: BaseMapper {
+public protocol ResponseMapper: Mapper {
     associatedtype Response
     
     func transformResponseToDomain(response: Response) -> Domain
