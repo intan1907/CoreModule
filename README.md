@@ -1,0 +1,2 @@
+# CoreModule
+CoreModule contains abstractions such as protocols and generic classes related with data source. The latest release add more general utilities such as DBManager, APIRequest, Preference Helper, JSONLoader, etc.
